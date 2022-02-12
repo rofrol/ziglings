@@ -11,7 +11,7 @@
 // Example:
 //
 //     var foo = 2;
-//     while (foo<10) : (foo+=2) {
+//     while (foo < 0) : (foo += 2) {
 //         // Do something with even numbers less than 10...
 //     }
 //
@@ -25,7 +25,7 @@ pub fn main() void {
 
     // Please set the continue expression so that we get the desired
     // results in the print statement below.
-    while (n < 1000) : ??? {
+    while (n < 1000) : (n *= 2) {
         // Print the current number
         std.debug.print("{} ", .{n});
     }
